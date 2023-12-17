@@ -13,6 +13,6 @@ def get_order_track():
     return track["track"]
 
 
-def get_order_info():
-    return requests.get(configuration.BASIC_URL + configuration.GET_ORDER_PATH + str(get_order_track()))
+def get_order_info(track):
+    return requests.get(configuration.BASIC_URL + configuration.GET_ORDER_PATH + str(track))
 
